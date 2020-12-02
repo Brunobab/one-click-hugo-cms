@@ -16,20 +16,18 @@ The Blue Mountains are considered by many to be a hiker's and camper's paradise.
 
 This is mainly due to the cold climate which inhibits growth. The small coffee farming communities of Claverty Cottage and Hagley Gap are located near the peak.
 
-```javascript
-document.querySelector("form").addEventListener("submit", handleSubmit);
-
-const handleSubmit = (e) => {
-  e.preventDefault()
-  let myForm = document.getElementById('pizzaOrder');
-  let formData = new FormData(myForm)
-  fetch('/', {
-    method: 'POST',
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString()
-  }).then(() => console.log('Form successfully submitted')).catch((error) =>
-    alert(error))
-}
+```html
+<form name="contact" netlify>
+  <p>
+    <label>Name <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Email <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
 ```
 
 ## What you need to know before trying
